@@ -5,7 +5,7 @@ Script to test web pages for shellshock vulnerabilities in headers
 Switches
 
 -u = URL
--h = Headings (optional)  to test a specific header feild in address, select number from list: 
+-h = Headings (optional), Not specifying an option will test all 3, to test a specific header feild in address, select number from list: 
 
       1 = "Content-Type"
 
