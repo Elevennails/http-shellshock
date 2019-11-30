@@ -2,12 +2,19 @@
 
 Script to test web pages for shellshock vulnerabilities in headers
 
-Command is optional default is /bin/uname -a, Full paths to commands are required
- 
-Headings to test, use -h and select number from list
- 1 = Content-Type
- 2 = Referer
- 3 = Cookie
+Switches
+
+-u = URL
+-h = Headings (optional)  to test a specific header feild in address, select number from list: 
+
+      1 = "Content-Type"
+
+      2 = "Referer"
+
+      3 = "Cookie"
+
+-s = Script command (optional) default is /bin/uname -a, Full paths to commands are required
+
 
 Examples below
 
@@ -15,7 +22,7 @@ Examples below
 
         ./http-shellshock.sh -u http://10.10.10.56/cgi-bin/user.sh
 
-Full paths to binaries may be required as web service user may not have loaded profile
+Full paths to binaries may be required as web service user may not have loaded profile. The below command tests a url "Content-Type" and cat's the passwd file in /etc.
 
          ./http-shellshock.sh -u http://10.10.10.56:80/cgi-bin/user.sh -h 1 -s '/bin/cat /etc/passwd'
 
